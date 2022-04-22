@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .top
+        {
+            width:18vw;
+            height: 15vh;
+            border: 0.1vh solid white;
+            background-color: white;
+            border-radius: 1vw;
+            box-shadow: 0px 0px 2px 2px  white;
+            margin: auto;
+            margin-top: 14vh;
+        }
+        .list{
+            width: 80vw;
+            height: 20vh;
+            border: 0.1vh solid transparent;
+            margin-top: 10vh;
+            margin-left: 8.5vw;
+            display: flex;
+        }
+        .p{
+            color: white;
+            font-size: 1.8vw;
+            text-align: center;
+            margin-top: 1.7vh;
+        }
+        .first
+        {
+            width:14vw;
+            height: 15vh;
+            border: 0.1vh solid white;
+            background-color: white;
+            border-radius: 1vw;
+            box-shadow: 0px 0px 2px 2px  white;
+            margin-top: 2vh;
+            margin-left: 5vw;
+         
+            
+        }
+        .second
+        {
+            width:14vw;
+            height: 15vh;
+            border: 0.1vh solid white;
+            background-color: white;
+            border-radius: 1vw;
+            box-shadow: 0px 0px 2px 2px  white;
+            margin-top: 2vh;
+            margin-left: 15vw;
+         
+            
+        }
+        .third
+        {
+            width:14vw;
+            height: 15vh;
+            border: 0.1vh solid white;
+            background-color: white;
+            border-radius: 1vw;
+            box-shadow: 0px 0px 2px 2px  white;
+            margin-top: 2vh;
+            margin-left: 15vw;
+         
+            
+        }
+        button{
+            width: 25vw;
+            height: 8vh;
+            border: none;
+            border: 0.1vh solid blueviolet;
+            border-radius: 4vw;
+            background-color: blueviolet;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            margin: auto;
+            margin-top: 8vh;
+            margin-left: 37.8vw;
+        }
+        button:hover{
+            background-color: blue;
+            border: 0.1vh solid blue;
+        }
+        .firsts{
+            font-size: 5vw;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600 ;
+            text-align: center;
+           
+            position: relative;
+           top: -10.8vh;
+        }
+        #firstcon{
+            background-color: green;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <p id="winner" ></p>
+    </div>
+    <p class="p">Winner</p>
+    <div class="list">
+        <div class="first">
+            <p id="first"></p>
+            
+            <br>
+            <p class="p">A</p>
+        </div>
+       
+        <div class="second">
+            <p id="second"></p>
+           
+            <br>
+            <p class="p">B</p>
+        </div>
+        <div class="third">
+            <p id="third"></p>
+            
+            <br>
+            <p class="p">C</p>
+        </div>
+    </div>
+    <button onclick="roll()">
+        ROLL THE DICE
+    </button>
+    <script>
+        var first = document.getElementById("first")
+        first.setAttribute("class","firsts")
+        var second = document.getElementById("second")
+        second.setAttribute("class","firsts")
+        var third = document.getElementById("third")
+        third.setAttribute("class","firsts")
+        var winner = document.getElementById("winner")
+        winner.setAttribute("class","firsts")
+   
+  
+        function roll()
+        {
+            let firsts = Math.floor(Math.random() * 6) + 1
+            let seconds = Math.floor(Math.random() * 6) + 1
+            let thirds = Math.floor(Math.random() * 6) + 1
+          console.log(firsts,seconds,thirds)
+          first.innerHTML = ""
+          first.innerHTML = firsts
+          second.innerHTML = ""
+          second.innerHTML = seconds
+          third.innerHTML = ""
+          third.innerHTML = thirds
+          var a = Math.max(firsts,seconds,thirds)
+          if(a===firsts)
+          {
+            winner.innerHTML = ""
+          winner.innerHTML = "A"
+          firtcon.setAttribute("id","firstcon")
+          
+          }
+          else if(a===seconds)
+          {
+            winner.innerHTML = ""
+          winner.innerHTML = "B"
+          }
+          else if(a==thirds){
+            winner.innerHTML = ""
+          winner.innerHTML = "C"
+          }
+          console.log(a)
+         
+        }
+
+
+    </script>
+</body>
+
+</html>
